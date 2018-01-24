@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body ng-app="labelApp">
+<div ng-controller="labelCntr">
+<div class="menu">
+  <div id="ambientlist" ng-click="showList()">
+    Ambient
+  </div>
+  <div class="list" ng-hide="list">
+    <ul>
+      <li>
+        <p ng-hide="label1">{{propertyName}}</p>
+
+        <input type="text" ng-hide="propertyField" ng-model="propertyName">
+        <i class="material-icons" ng-hide="propertyEdit" ng-click="editProperty()">&#xE22B;</i>
+
+        <i class="material-icons" ng-hide="propertySave" ng-click="saveProperty()">&#xE161;</i>
+
+      </li>
+      <li>
+        <p ng-hide="label2">{{inventoryName}}</p>
+
+        <input type="text" ng-hide="inventoryField" ng-model="inventoryName">
+
+        <i ng-click="editInventory()" ng-hide="inventoryEdit" class="material-icons">&#xE22B;</i>
+        <i class="material-icons" ng-hide="inventorySave" ng-click="saveInventory()">&#xE161;</i>
+
+      </li>
+      <li>
+        <p ng-hide="label3">{{compaignName}}</p>
+
+        <input type="text" ng-hide="compaignField" ng-model="compaignName">
+        <i class="material-icons" ng-hide="compaignEdit" ng-click="editCampaign()">&#xE22B;</i>
+
+        <i class="material-icons" ng-hide="compaignSave" ng-click="saveCompaign()">&#xE161;</i>
+
+      </li>
+
+    </ul>
+  </div>
+</div>
+</div>
+</body>
+</html>
